@@ -27,15 +27,25 @@
   Then invoke the callback function, passing in the first element in the array as it's argument.
 */
 
-// Code Here 
+function first(arr, cb){
+    return cb(arr[0])
+
 
 // Do not edit the code below.
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 
-first(names, function(firstName){
-  console.log('The first name in names is ' + firstName);
-  return firstName;
-});
+// function uniq(arr, callbackFn){
+
+  var deduplicated = []
+  for (let i = arr.length -1; i >= 0; i--)
+   for (let k = 0; k < i; k++){
+    if (arr[i] === arr[k])
+    arr.splice(i, 1)
+   }
+   callbackFN(arr)
+// }
+// }
+
 // Do not edit the code above.
 
 
@@ -47,7 +57,9 @@ first(names, function(firstName){
   Then invoke the callback, passing in the last element in the array as the argument.
 */
 
-//Code Here
+function last(array, callBack){
+
+}
 
 // Do not edit the code below.
 last(names, function(lastName){
@@ -167,3 +179,7 @@ getUserById(users, '16t', function(user){
   console.log('The user with the id 16t has the email of ' + user.email + ' the name of ' + user.name + ' and the address of ' + user.address); 
 });
 // Do not edit the code above.
+
+
+
+
